@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* mobile styling */
+
+@media screen and (max-width: 410px) {
+:root {
+    font-size: 8px;
+}
+html {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../assets/home/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-inline: 25px;
+    overflow: hidden;
+
+}
+
+
+/* start of nav style */
+
+nav {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#logo {
+    transform: scale(75%);
+}
+#hamburger {
+    margin-left: auto;
+}
+
+#close-nav {
+    position: absolute;
+    top: 40px;
+    right: 25px;
+    z-index: 3;
+}
+#nav-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 66vw;
+    height: 100vh;
+    padding: 35px;
+
+    background-color: rgba(53, 53, 53, 0.3);
+    backdrop-filter: blur(30px);
+
+    /* display: none; */
+    transform: translateX(247.5px);
+    /* transition: transform ease 1s; */
+}
+
+#nav-modal h5 {
+    text-align: left;
+    font-size: 2rem;
+}
+
+/* animation for mobile nav open and close */
+.open-nav-animation {
+    animation: open-nav-animation ease 1s both;
+    display: block !important; 
+}
+
+.close-nav-animation {
+    animation: close-nav-animation ease 1s both;
+}
+
+.display-none {
+    display: none;
+}
+@keyframes open-nav-animation {
+    0% {
+        /* display: none; */
+    }
+    100% {
+        display: block;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes close-nav-animation {
+    0% {
+        
+        transform: translateX(0px);
+    }
+    99% {
+        transform: translateX(247.5px);
+        /* display: none; */
+    }
+    100% {
+        display: none;
+    }
+} 
+ol {
+    margin-top: 100px;
+    
+}
+ol li {
+    margin-block: 30px;
+}
+.number {
+    width: 25px;
+    margin-right: 10px;
+}
+
+/* start of styling for main content of index page */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#index-subheader {
+    margin-bottom: 20px;
+}
+#index-header {
+    margin-bottom: 20px;
+}
+
+#explore {
+    position: absolute;
+    bottom: 7vh;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    border-style: none;
+    
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#explore h1 {
+    color: black;
+    font-size: 2.5rem;
+}
+
+p {
+    line-height: 3.5rem;
+    font-size: 2rem;
+}
+}

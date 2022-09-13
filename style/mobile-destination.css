@@ -1,0 +1,23 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    height: 100%;
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    padding-inline: 25px;
+    overflow: hidden;
+}
+
+#planet {
+    width: 170px;
+}
+
+ol {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
