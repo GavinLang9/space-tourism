@@ -26,6 +26,7 @@ body {
     background-size: cover;
     background-position: center;
     padding-inline: 25px;
+    position: relative;
     overflow: hidden;
 
 }
@@ -38,6 +39,7 @@ nav {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    overflow: hidden;
 }
 
 #logo {
