@@ -80,3 +80,7 @@ ol li h5{
 .number {
     font-weight: bold;
 }
+
+a {
+    text-decoration: none;
+}

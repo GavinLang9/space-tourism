@@ -16,6 +16,13 @@ body {
 nav {
     margin-bottom: 0;
 }
+
+#hamburger:hover {
+    cursor: pointer;
+}
+path {
+    pointer-events: none;
+}
 header {
     display: flex;
     justify-content: space-between;

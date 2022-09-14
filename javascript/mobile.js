@@ -1,21 +1,42 @@
-let hamburger = document.getElementById("hamburger");
-let closeNav = document.getElementById("close-nav");
-let mobileNav = document.getElementById("nav-modal");
-hamburger.addEventListener('click', openNavigation);
-closeNav.addEventListener('click', closeNavigation);
+
+
+var hamburger = document.querySelector("#hamburger");
+var closeNav = document.querySelector("#close-nav");
+var mobileNav = document.querySelector("#nav-modal");
 
 function openNavigation() {
-    // mobileNav.style.display = "block";
-    // console.log("open");
+    var mobileNav = document.querySelector("#nav-modal");
+
     mobileNav.classList.add("open-nav-animation");
     mobileNav.classList.remove("close-nav-animation");
     mobileNav.classList.remove("display-none");
 }
 
 function closeNavigation() {
-    // mobileNav.style.display = "none";
-    // console.log("close");
+    var mobileNav = document.querySelector("#nav-modal");
     mobileNav.classList.add("close-nav-animation");
     mobileNav.classList.remove("open-nav-animation");
 
 }
+
+document.addEventListener("click", (e) => {
+    if(e.target && e.target.id == "hamburger") {
+        console.log("hit");
+        openNavigation();
+    }
+});
+
+document.addEventListener("click", (e) => {
+    if(e.target && e.target.id == "close-nav") {
+        console.log("hit");
+        closeNavigation();
+    }
+});
+
+
+
+
+// export { hamburger, closeNav, mobileNav, openNavigation, closeNavigation };
+
+console.log(hamburger);
+

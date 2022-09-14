@@ -55,7 +55,7 @@ nav {
     z-index: 3;
 }
 #nav-modal {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     z-index: 2;
@@ -94,7 +94,6 @@ nav {
         /* display: none; */
     }
     100% {
-        display: block;
         transform: translateX(0px);
     }
 }
@@ -104,12 +103,9 @@ nav {
         
         transform: translateX(0px);
     }
-    99% {
+    100% {
         transform: translateX(247.5px);
         /* display: none; */
-    }
-    100% {
-        display: none;
     }
 } 
 .nav-items {
