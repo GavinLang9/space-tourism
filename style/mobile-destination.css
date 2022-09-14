@@ -9,15 +9,76 @@ body {
     background-size: 100%;
     background-position: top;
     padding-inline: 25px;
-    overflow: hidden;
+    padding-bottom: 40px;
+    overflow-x: hidden;
 }
 
-#planet {
-    width: 170px;
+nav {
+    margin-bottom: 0;
 }
-
-ol {
+header {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+
+    margin-bottom: 30px;
 }
+#planet {
+    width: 170px;
+    margin-bottom: 30px;
+}
+
+.second-nav-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.second-nav-items li {
+    position: relative;
+}
+
+.second-nav-items li.current::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: -1.5px;
+    bottom: -5px;
+
+}
+
+h1 {
+    font-size: 6.5rem;
+}
+
+p {
+    margin-bottom: 30px;
+}
+hr {
+    width: 100%;
+    height: 1px;
+    opacity: .2;
+
+    margin-bottom: 30px;
+}
+
+.stat {
+    margin-bottom: 30px;
+}
+
+.subheader1 {
+    font-size: 3.5rem;
+    font-weight: 100;
+    /* margin-bottom: 30px; */
+}
+
+.subheader2 {
+    font-size: 1.8rem;
+    letter-spacing: .5rem;
+    margin-bottom: 15px;
+}
+

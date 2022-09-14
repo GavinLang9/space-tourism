@@ -16,7 +16,7 @@
 html {
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 body {
     height: 100vh;
@@ -27,7 +27,7 @@ body {
     background-position: center;
     padding-inline: 25px;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 
 }
 
@@ -39,7 +39,6 @@ nav {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-    overflow: hidden;
 }
 
 #logo {
@@ -66,7 +65,7 @@ nav {
 
     background-color: rgba(53, 53, 53, 0.3);
     backdrop-filter: blur(30px);
-
+    -webkit-backdrop-filter: blur(30px);
     /* display: none; */
     transform: translateX(247.5px);
     /* transition: transform ease 1s; */
@@ -113,11 +112,11 @@ nav {
         display: none;
     }
 } 
-ol {
+.nav-items {
     margin-top: 100px;
     
 }
-ol li {
+.nav-items li {
     margin-block: 30px;
 }
 .number {
@@ -141,17 +140,20 @@ main {
 }
 
 #explore {
-    position: absolute;
-    bottom: 7vh;
+    
     width: 40vw;
     height: 40vw;
     border-radius: 50%;
     border-style: none;
     
+    margin-top: 100px;
+
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    z-index: 0;
 }
 #explore h1 {
     color: black;
