@@ -1,6 +1,12 @@
 function createDestinationTemplate(data, index) {
-
-    return `
+   let main = document.createElement("main");
+   let header = document.createElement("header");
+   let number = document.createElement("h5");
+   number.textContent = "01";
+   header.appendChild(number);
+   main.appendChild(header);
+   return main;
+     `
   <main>
     <header>
       <h5>01</h5>
