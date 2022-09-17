@@ -14,8 +14,7 @@ xhr.send();
 
 
 function renderHTML(data) {
-    let body = document.querySelector("body");
-    body.innerHTML += createDestinationTemplate(data, 1);
+    createDestinationTemplate(data, 1);
     
 }
 

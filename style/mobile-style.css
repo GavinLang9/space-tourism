@@ -142,7 +142,8 @@ main {
     border-radius: 50%;
     border-style: none;
     
-    margin-top: 100px;
+    margin-top: 13vh;
+    margin-bottom: 50px;
 
     background-color: white;
     display: flex;
@@ -162,7 +163,7 @@ p {
 }
 
 hr {
-    width: 100%;
+    width: 85vw;
     height: 1px;
     opacity: .2;
 

@@ -3,18 +3,25 @@
     --active-color: white;
 }
 
+
+@media screen and (max-width: 410px) {
+
 body {
     background-image: url("../assets/crew/background-crew-mobile.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top;
-    padding-inline: 25px;
+    backdrop-filter: blur(1px);
+    padding-inline: 0px;
     padding-bottom: 40px;
     overflow-x: hidden;
 }
 
+
+/* start of nav styling */
 nav {
     margin-bottom: 0;
+    padding-inline: 25px;
 }
 
 #hamburger:hover {
@@ -23,20 +30,46 @@ nav {
 path {
     pointer-events: none;
 }
+
+
+/* start of main styling */
+main {
+    position: relative;
+}
 header {
     display: flex;
     justify-content: space-between;
     gap: 15px;
 
-    margin-bottom: 30px;
+    margin-bottom: 260px;
 }
 
 
+#crew-images {
+    width: 400vw;
+    height: 250px;
+    position: absolute;
+    top: 30px;
+    align-self: flex-start;
+    display: flex;
+    align-items:baseline;
+    /* transform: translateX(700px); */
+}
 
-
-#crew-member {
+.crew {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.crew1 {
+    left: 50%;
+}
+.crew-member {
     width: 21rem;
 }
+
+/* styling second nav bar */
+
 .second-nav-items {
     display: flex;
     justify-content: space-between;
@@ -55,6 +88,21 @@ header {
     background-color: white;
     border-radius: 50%;
 }
+
+#crew-description {
+    display: flex;
+    width: 400vw;
+    height: 250px;
+    /* position: absolute; */
+    bottom: 50px;
+    align-self: flex-start;
+    display: flex;
+}
+
+.crew-description {
+    width: 100vw;
+    padding-inline: 30px;
+}
 h4 {
     color: grey;
     margin-bottom: 10px;
@@ -69,4 +117,6 @@ h5 {
 
 p {
     margin-bottom: 40px;
+}
+
 }
