@@ -2,7 +2,7 @@ import { createCrewTemplate, setCurrent } from "./crewTemplate.js";
 
 // Get data from JSON file
 let xhr = new XMLHttpRequest();
-xhr.open("GET", "../data.json");
+xhr.open("GET", "/data.json");
 
 xhr.onload = function() {
     if(xhr.status === 200) {
