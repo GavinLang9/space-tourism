@@ -27,6 +27,7 @@ let crewNav = document.querySelectorAll(".crew-nav");
 var startingX;
 var startingLeft;
 
+
 crewImages.addEventListener("touchstart", (e) => {
     startingX = e.touches[0].clientX;
     console.log("startingX: " + startingX);
@@ -67,9 +68,23 @@ crewDescriptions.addEventListener("touchend", (e) => {
 
 // functionality of second nav buttons
 
-let secondNav = document.querySelectorAll(".second-nav-items a");
+var secondNav = document.querySelectorAll(".second-nav-items a");
+console.log(secondNav);
+for(let i = 0; i < 4; ++i) {
+    secondNav[i].addEventListener("click", (e) => {
+        crewImages.style.transition = 'all .3s';
+        crewDescriptions.style.transition = 'all .3s';
+        setLeft(i);
+        setCurrent(crewNav, i);
+        e.preventDefault();
 
-
+    });
+}
+// secondNav[1].addEventListener("click", (e) => {
+//     crewImages.style.left = "-100vw";
+//     crewDescriptions.style.left = "-100vw";
+//     e.preventDefault();
+// })
 
 
 
@@ -80,18 +95,22 @@ function updateScreen(e) {
 
     // if the screen isn't moved that much, stay on current page
     if(change < threshold && startingLeft == 0) {
-        translateX(0);
+        crewImages.style.left = 0;
+        crewDescriptions.style.left = 0;
         setCurrent(crewNav, 0);
     } else if(change < threshold && change > -threshold && startingLeft == -width) {
-        translateX(1);
+        crewImages.style.left = "-100vw";
+        crewDescriptions.style.left = "-100vw";        
         setCurrent(crewNav, 1);
 
     } else if(change < threshold && change > -threshold && startingLeft == -(2 * width)) {
-        translateX(2);
+        crewImages.style.left = "-200vw";
+        crewDescriptions.style.left = "-200vw";
         setCurrent(crewNav, 2);
 
     } else if(change > -threshold && startingLeft == -(3 * width)) {
-        translateX(3);
+        crewImages.style.left = "-300vw";
+        crewDescriptions.style.left = "-300vw";
         setCurrent(crewNav, 3);
 
     } 
@@ -158,7 +177,8 @@ function updateScreen(e) {
     }
 }
 
-function translateX(index) {
-    crewImages.style.left = -(index * screen.width);
-    crewDescriptions.style.left = -(index * screen.width);
+function setLeft(index) {
+    console.log(-(index * screen.width));    
+    crewDescriptions.style.left = -(index * screen.width) + "px";
+    crewImages.style.left = -(index * screen.width) + "px";
 }
