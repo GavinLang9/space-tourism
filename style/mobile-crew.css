@@ -35,6 +35,7 @@ path {
 /* start of main styling */
 main {
     position: relative;
+    height: 95vh;
 }
 header {
     display: flex;
@@ -93,7 +94,8 @@ header {
     display: flex;
     width: 400vw;
     height: 250px;
-    /* position: absolute; */
+    position: absolute;
+    top: 350px;
     bottom: 50px;
     align-self: flex-start;
     display: flex;
