@@ -1,6 +1,6 @@
 import { createDestinationTemplate } from "./destinationTemplate.js";
 let xhr = new XMLHttpRequest();
-xhr.open("GET", "/data.json");
+xhr.open("GET", "data.json");
 
 xhr.onload = function() {
     if(xhr.status === 200) {
