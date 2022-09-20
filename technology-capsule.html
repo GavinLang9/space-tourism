@@ -5,28 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/mobile-style.css">
+  <link rel="stylesheet" href="style/mobile-technology.css">
+  <script type="module" src="./javascript/technology-template.js" defer></script>
+  <script type="module" src="./javascript/technology-capsule.js" defer></script>
+  <script src="./javascript/mobile.js" defer></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body>
+  <nav>  
+    <a href="index.html"><svg id="logo" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg></a>
+    <img id="hamburger" src="./assets/shared/icon-hamburger.svg" alt="hamburger">    
+  </nav>
+  <aside id="nav-modal" class="display-none">
+     <img id="close-nav" src="./assets/shared/icon-close.svg" alt="close-navigation"> 
+      <ol class="nav-items">
+        <li>
+          <a href="./index.html">
+            <h5 class="number">00</h5>
+            <h5>Home</h5>
+          </a>
+        </li>     
+        <li>
+          <a href="./destination-moon.html">
+            <h5 class="number">01</h5>
+            <h5>Destination</h5>
+          </a>
+        </li> 
+        <li>
+          <a href="./crew-commander.html">
+            <h5 class="number">02</h5>
+            <h5>Crew</h5>
+          </a>
+        </li> 
+        <li>
+          <a href="./technology-vehicle.html">
+            <h5 class="number">03</h5>
+            <h5>Technology</h5>
+          </a>
+        </li>          
+      </ol> 
+  </aside>
+  <main>
+    <header>
+      <h5 id="number">03</h5>
+      <h5>Space Launch 101</h5>
+    </header>
+    <img src="" alt="" id="technology-image">
+    <ol class="second-nav-items">
+      <a class="technology-nav" href="./technology-vehicle.html"><li ><h5>1</h5></li></a>
+      <a class="technology-nav" href="./technology-spaceport.html"><li><h5>2</h5></li></a>
+      <a class="technology-nav" href="./technology-capsule.html"><li><h5>3</h5></li></a>
+    </ol>
+    <h5 id="the-technology">The Technology...</h5>
+    <h3 id="name"></h3>
+    <p id="description"></p>
+  </main>
+ 
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  03 Space launch 101
-
-  1
-  2
-  3
-
-  The terminology...
-  Space capsule
-
-  A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
-  capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
-  you'll spend your time during the flight. It includes a space gym, cinema, 
-  and plenty of other activities to keep you entertained.
 </body>
 </html>

@@ -28,20 +28,20 @@ var startingX;
 var startingLeft;
 
 
-crewImages.addEventListener("touchstart", (e) => {
+document.addEventListener("touchstart", (e) => {
     startingX = e.touches[0].clientX;
     console.log("startingX: " + startingX);
     startingLeft = crewImages.offsetLeft;
     console.log("startingLeft: " + startingLeft);
 });
 
-crewDescriptions.addEventListener("touchstart", (e) => {
-    startingX = e.touches[0].clientX;
-    console.log("startingX: " + startingX);
-    startingLeft = crewDescriptions.offsetLeft;
-    console.log("startingLeft: " + startingLeft);
-});
-crewImages.addEventListener("touchmove", (e) => {
+// crewDescriptions.addEventListener("touchstart", (e) => {
+//     startingX = e.touches[0].clientX;
+//     console.log("startingX: " + startingX);
+//     startingLeft = crewDescriptions.offsetLeft;
+//     console.log("startingLeft: " + startingLeft);
+// });
+document.addEventListener("touchmove", (e) => {
     var touch = e.touches[0];
     var change = startingX - touch.clientX;
     console.log("change: " + change);
@@ -50,21 +50,21 @@ crewImages.addEventListener("touchmove", (e) => {
     e.preventDefault();
 })
 
-crewDescriptions.addEventListener("touchmove", (e) => {
-    var touch = e.touches[0];
-    var change = startingX - touch.clientX;
-    console.log("change: " + change);
-    crewImages.style.left = '-' + (change - startingLeft) + 'px';
-    crewDescriptions.style.left = '-' + (change - startingLeft) + 'px';
-    e.preventDefault();
-})
-crewImages.addEventListener("touchend", (e) => {
+// crewDescriptions.addEventListener("touchmove", (e) => {
+//     var touch = e.touches[0];
+//     var change = startingX - touch.clientX;
+//     console.log("change: " + change);
+//     crewImages.style.left = '-' + (change - startingLeft) + 'px';
+//     crewDescriptions.style.left = '-' + (change - startingLeft) + 'px';
+//     e.preventDefault();
+// })
+document.addEventListener("touchend", (e) => {
     updateScreen(e)
 });
 
-crewDescriptions.addEventListener("touchend", (e) => {
-    updateScreen(e)
-})
+// crewDescriptions.addEventListener("touchend", (e) => {
+//     updateScreen(e)
+// })
 
 // functionality of second nav buttons
 
